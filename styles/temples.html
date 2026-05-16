@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temple Album - Norlin Vicente</title>
+
+    <meta name="description"
+        content="Temple Album project for WDD 131 by Norlin Vicente featuring responsive web design and JavaScript navigation.">
+
+    <meta name="author" content="Norlin Vicente">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/temples.css">
+
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="scripts/temples.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Temple Album</h1>
+
+        <button id="menu-button">☰</button>
+
+        <!-- FIXED HERE -->
+        <nav class="hide">
+
+            <a href="#">Home</a>
+
+            <a href="#">Old</a>
+
+            <a href="#">New</a>
+
+            <a href="#">Large</a>
+
+            <a href="#">Small</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h2>Temple Gallery</h2>
+
+        <div class="gallery">
+
+            <figure>
+                <img src="images/temple1.jpg" alt="Guatemala City Temple" loading="lazy">
+
+                <figcaption>Guatemala City Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple2.jpg" alt="Salt Lake Temple" loading="lazy">
+
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple3.jpg" alt="Rome Italy Temple" loading="lazy">
+
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple4.jpg" alt="Tokyo Japan Temple" loading="lazy">
+
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple5.jpg" alt="Paris France Temple" loading="lazy">
+
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple6.jpg" alt="Mexico City Temple" loading="lazy">
+
+                <figcaption>Mexico City Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple7.jpg" alt="Sao Paulo Temple" loading="lazy">
+
+                <figcaption>São Paulo Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple8.jpg" alt="Lima Peru Temple" loading="lazy">
+
+                <figcaption>Lima Peru Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple9.jpg" alt="Madrid Spain Temple" loading="lazy">
+
+                <figcaption>Madrid Spain Temple</figcaption>
+            </figure>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            | Norlin Vicente | Guatemala
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
