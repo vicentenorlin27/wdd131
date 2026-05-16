@@ -8,10 +8,9 @@ body {
 /* HEADER */
 
 header {
-    background-color: #003049;
+    background-color: #4b0082;
     color: #ffffff;
     padding: 1rem;
-    text-align: center;
 }
 
 header h1 {
@@ -19,7 +18,7 @@ header h1 {
     font-family: "Montserrat", sans-serif;
 }
 
-/* MENU BUTTON */
+/* HAMBURGER */
 
 #menu-button {
     background: none;
@@ -27,7 +26,9 @@ header h1 {
     color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
-    margin-top: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 /* NAVIGATION */
@@ -43,18 +44,19 @@ nav a {
     text-decoration: none;
     padding: 1rem;
     background-color: #1d3557;
-    margin: 0.2rem 0;
+    margin: 0.25rem 0;
     border-radius: 5px;
     transition: 0.3s ease;
+    text-align: center;
 }
 
 nav a:hover {
     background-color: #f77f00;
 }
 
-/* HIDE NAV */
+/* THIS IS THE IMPORTANT FIX */
 
-nav.hide {
+.hide {
     display: none;
 }
 
@@ -68,7 +70,7 @@ main {
 
 main h2 {
     text-align: center;
-    color: #003049;
+    color: #000000;
 }
 
 /* GALLERY */
@@ -76,14 +78,15 @@ main h2 {
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 figure {
     background-color: #ffffff;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 0;
 }
 
 figure img {
@@ -94,14 +97,15 @@ figure img {
 
 figcaption {
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     font-weight: bold;
+    color: #4b0082;
 }
 
 /* FOOTER */
 
 footer {
-    background-color: #003049;
+    background-color: #4b0082;
     color: #ffffff;
     text-align: center;
     padding: 1rem;
