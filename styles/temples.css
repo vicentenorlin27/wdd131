@@ -12,7 +12,7 @@ header {
     padding: 1rem;
 }
 
-/* CONTAINER */
+/* HEADER CONTAINER */
 .header-container {
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ h1 {
     margin: 0;
 }
 
-/* HAMBURGER BUTTON */
+/* HAMBURGER MENU */
 #menu {
     position: absolute;
     right: 1rem;
@@ -62,16 +62,18 @@ nav a {
     text-align: center;
 }
 
-/* ✅ FIXED ACCESSIBILITY ISSUE */
+/* ACTIVE LINK (FIXED CONTRAST) */
 nav a.active {
     background-color: #ffffff;
     color: #00334e;
     border-radius: 4px;
 }
 
-/* hover effect */
+/* HOVER (FIXED CONTRAST ISSUE) */
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #ffffff;
+    color: #00334e;
+    border-radius: 4px;
 }
 
 /* MAIN */
