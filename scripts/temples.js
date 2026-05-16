@@ -1,15 +1,13 @@
 // FOOTER YEAR
 
-const year = new Date().getFullYear();
-
-document.getElementById("currentyear").textContent = year;
+document.getElementById("currentyear").textContent =
+    new Date().getFullYear();
 
 
 // LAST MODIFIED
 
 document.getElementById("lastModified").textContent =
     `Last Modified: ${document.lastModified}`;
-
 
 
 // HAMBURGER MENU
@@ -23,7 +21,7 @@ menuButton.addEventListener("click", () => {
     navigation.classList.toggle("hide");
 
     if (menuButton.textContent === "☰") {
-        menuButton.textContent = "X";
+        menuButton.textContent = "✖";
     } else {
         menuButton.textContent = "☰";
     }
