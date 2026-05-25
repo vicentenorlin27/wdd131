@@ -1,4 +1,4 @@
-/* DESIGN VARIABLES */
+/* PALETTE AND STRUCTURAL VARIABLES */
 :root {
     --primary: #003049;
     --secondary: #ffffff;
@@ -8,7 +8,7 @@
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* BASE STYLES */
+/* GENERAL RESETS */
 body {
     margin: 0;
     font-family: "Roboto", Arial, sans-serif;
@@ -17,7 +17,6 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER STYLE */
 header {
     background-color: var(--primary);
     color: var(--secondary);
@@ -29,10 +28,8 @@ header h1 {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-size: 2.2rem;
-    letter-spacing: 1px;
 }
 
-/* MAIN CONTENT CONTAINER */
 main {
     max-width: 1100px;
     margin: 1.5rem auto;
@@ -42,7 +39,7 @@ main {
     gap: 1.5rem;
 }
 
-/* HERO RESPONSIVE BANNER */
+/* IMAGE BOUNDING CONTAINER FOR HERO */
 .hero-container {
     width: 100%;
     overflow: hidden;
@@ -53,12 +50,12 @@ main {
 .hero-img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 350px;
     object-fit: cover;
     display: block;
 }
 
-/* REUSABLE CARD WRAPPER FRAME */
+/* DECORATED CONTENT FRAMES */
 .card {
     background-color: var(--secondary);
     border-radius: 12px;
@@ -74,9 +71,17 @@ main {
     font-family: "Montserrat", sans-serif;
     border-bottom: 2px solid var(--bg-light);
     padding-bottom: 0.5rem;
+    position: relative;
 }
 
-/* CONTENT INSIDE CARDS */
+/* AUDIT FIX: Mandatory ::after selector implementation */
+.card h2::after {
+    content: " 🧭";
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-left: 6px;
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
@@ -84,7 +89,6 @@ main {
     align-items: center;
 }
 
-/* LIST COMPONENT STYLING */
 ul {
     list-style: none;
     padding: 0;
@@ -101,16 +105,14 @@ ul li:last-child {
     border-bottom: none;
 }
 
-/* INNER COMPONENT IMAGE SIZES */
 .flag-img {
     width: 100%;
-    max-width: 220px;
+    max-width: 200px;
     height: auto;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* WEATHER BOX GRID ARRANGEMENT */
 .weather-layout {
     text-align: center;
 }
@@ -124,7 +126,7 @@ ul li:last-child {
     margin: 0.4rem 0;
 }
 
-/* STYLISH GALLERY DESIGN LAYOUT */
+/* PHOTO GALLERY ELEMENTS */
 .gallery-grid {
     display: flex;
     flex-direction: column;
@@ -143,7 +145,7 @@ ul li:last-child {
 
 .gallery-item img {
     width: 100%;
-    height: 220px;
+    height: 240px;
     object-fit: cover;
     display: block;
 }
@@ -155,7 +157,6 @@ ul li:last-child {
     background-color: var(--secondary);
 }
 
-/* CLEAN FOOTER BLOCKS */
 footer {
     background-color: var(--primary);
     color: var(--secondary);

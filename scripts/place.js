@@ -1,11 +1,10 @@
-// // WIND CHILL FUNCTION (Strict One-Line Return Formula)
+// Function computing standard wind chill metric outputs
 function calculateWindChill(temp, speed) {
     return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(1);
 }
 
-// // Execute calculations when DOM content is fully ready
+// Initializing execution upon safe page completion loads
 document.addEventListener("DOMContentLoaded", () => {
-    // // STATIC VALUES FROM THE ELEMENTS
     const tempElement = document.getElementById("temp");
     const windElement = document.getElementById("wind");
     const windChillDisplay = document.getElementById("windchill");
@@ -16,17 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let result = "N/A";
 
-        // // CONDITIONS CHECK (Required by Assignment Rubric)
+        // Criteria validation checks
         if (temp <= 10 && wind > 4.8) {
-            // FIXED: Removed the duplicate .toFixed(1) to prevent code runtime crashes
             result = `${calculateWindChill(temp, wind)} °C`;
         }
 
-        // // DISPLAY RESULT
         windChillDisplay.textContent = result;
     }
 
-    // // FOOTER CONFIGURATION INFO
+    // Dynamic configuration variables inside footer structures
     const yearSpan = document.getElementById("year");
     const modifiedSpan = document.getElementById("lastModified");
 

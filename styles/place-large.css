@@ -1,11 +1,10 @@
-/* TARGET MONITORS AND DESKTOPS */
+/* LARGE DISPLAY MEDIA ENHANCEMENTS */
 @media (min-width: 768px) {
-
     main {
         gap: 2rem;
     }
 
-    /* FORMS THE SIDE-BY-SIDE TWO-COLUMN BLOCK */
+    /* Arranges cards neatly side by side */
     .content-columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -13,7 +12,6 @@
         align-items: start;
     }
 
-    /* ADAPTS DATA CARD CONTENT SIDE-BY-SIDE */
     .data-card .card-content {
         flex-direction: row;
         align-items: flex-start;
@@ -24,20 +22,19 @@
         flex: 1;
     }
 
-    /* ADAPTS WEATHER ELEMENT GRAPHICS SIDE-BY-SIDE */
     .weather-card .card-content {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
-        padding: 1rem 0;
+        gap: 2.5rem;
+        padding: 1.2rem 0;
     }
 
     .weather-info {
         text-align: left;
     }
 
-    /* CONVERTS VERTICAL IMAGES INTO A STUNNING 3-COLUMN GALLERY GRID */
+    /* Sets up picture cards in a clean horizontal layout */
     .gallery-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -46,12 +43,10 @@
 
     .gallery-item img {
         height: 200px;
-        /* Forces all images to stay bounded identically */
         transition: transform 0.3s ease;
     }
 
-    /* Elegant hover animation effects */
     .gallery-item:hover img {
-        transform: scale(1.03);
+        transform: scale(1.02);
     }
 }
