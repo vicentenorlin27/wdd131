@@ -1,33 +1,57 @@
+/* TARGET MONITORS AND DESKTOPS */
 @media (min-width: 768px) {
+
     main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
         gap: 2rem;
-        max-width: 1100px;
-        margin: auto;
-        padding: 2rem 1rem;
     }
 
-    .hero {
-        grid-column: 1 / -1;
+    /* FORMS THE SIDE-BY-SIDE TWO-COLUMN BLOCK */
+    .content-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
     }
 
-    .highlights {
-        grid-column: 1 / -1;
+    /* ADAPTS DATA CARD CONTENT SIDE-BY-SIDE */
+    .data-card .card-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
 
-    .gallery {
+    .data-card ul {
+        flex: 1;
+    }
+
+    /* ADAPTS WEATHER ELEMENT GRAPHICS SIDE-BY-SIDE */
+    .weather-card .card-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .weather-info {
+        text-align: left;
+    }
+
+    /* CONVERTS VERTICAL IMAGES INTO A STUNNING 3-COLUMN GALLERY GRID */
+    .gallery-grid {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
 
-    /* Requirement 5 & 6: Hide the mobile SVG and trigger the pseudo-element emoticon symbol */
-    .weather-icon {
-        display: none;
+    .gallery-item img {
+        height: 200px;
+        /* Forces all images to stay bounded identically */
+        transition: transform 0.3s ease;
     }
 
-    .weather h2::after {
-        content: " ⛅";
-        font-size: 1.4rem;
-        vertical-align: middle;
+    /* Elegant hover animation effects */
+    .gallery-item:hover img {
+        transform: scale(1.03);
     }
 }

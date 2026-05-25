@@ -24,45 +24,60 @@
 
     <main>
 
-        <section class="hero">
+        <div class="hero-container">
             <picture>
                 <source srcset="images/guatemala-large.webp" media="(min-width: 768px)">
-                <img src="images/guatemala-small.webp" alt="Guatemala landscape">
+                <img src="images/guatemala-small.webp" alt="Guatemala landscape" class="hero-img">
             </picture>
-        </section>
+        </div>
 
-        <section class="data">
-            <h2>Country Data</h2>
+        <div class="content-columns">
 
-            <img src="images/flag-guatemala.webp" alt="Guatemala Flag">
+            <section class="card data-card">
+                <h2>Country Data</h2>
+                <div class="card-content">
+                    <img src="images/flag-guatemala.webp" alt="Guatemala Flag" class="flag-img">
+                    <ul>
+                        <li><strong>Capital:</strong> Guatemala City</li>
+                        <li><strong>Population:</strong> 17.9M</li>
+                        <li><strong>Area:</strong> 108,889 km²</li>
+                        <li><strong>Languages:</strong> Spanish, Mayan</li>
+                        <li><strong>Currency:</strong> Quetzal</li>
+                        <li><strong>Time Zone:</strong> UTC -6</li>
+                    </ul>
+                </div>
+            </section>
 
-            <ul>
-                <li><strong>Capital:</strong> Guatemala City</li>
-                <li><strong>Population:</strong> 17.9M</li>
-                <li><strong>Area:</strong> 108,889 km²</li>
-                <li><strong>Languages:</strong> Spanish, Mayan</li>
-                <li><strong>Currency:</strong> Quetzal</li>
-                <li><strong>Time Zone:</strong> UTC -6</li>
-            </ul>
-        </section>
+            <section class="card weather-card">
+                <h2>Weather</h2>
+                <div class="card-content weather-layout">
+                    <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+                    <div class="weather-info">
+                        <p><strong>Temperature:</strong> <span id="temp">24</span> °C</p>
+                        <p><strong>Wind Speed:</strong> <span id="wind">10</span> km/h</p>
+                        <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+                    </div>
+                </div>
+            </section>
 
-        <section class="weather">
-            <h2>Weather</h2>
+        </div>
 
-            <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
-
-            <p>Temperature: <span id="temp">24</span> °C</p>
-            <p>Wind Speed: <span id="wind">10</span> km/h</p>
-
-            <p>Wind Chill: <span id="windchill"></span></p>
-        </section>
-
-        <section class="highlights">
-            <h2>Highlights</h2>
-
-            <img src="images/volcan-fuego.webp" alt="Volcan Fuego">
-            <img src="images/lake-atitlan.webp" alt="Lake Atitlán">
-            <img src="images/antigua.webp" alt="Antigua Guatemala">
+        <section class="card gallery-card">
+            <h2>Country Highlights</h2>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="images/volcan-fuego.webp" alt="Volcan Fuego">
+                    <figcaption>Volcán de Fuego</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/lake-atitlan.webp" alt="Lake Atitlán">
+                    <figcaption>Lake Atitlán</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/antigua.webp" alt="Antigua Guatemala">
+                    <figcaption>Antigua Guatemala</figcaption>
+                </figure>
+            </div>
         </section>
 
     </main>
