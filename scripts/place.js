@@ -1,9 +1,9 @@
 // // WIND CHILL FUNCTION (Strict One-Line Return Formula)
 function calculateWindChill(temp, speed) {
-    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16);
+    return (13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16)).toFixed(1);
 }
 
-// Execute calculations when DOM content is fully ready
+// // Execute calculations when DOM content is fully ready
 document.addEventListener("DOMContentLoaded", () => {
     // // STATIC VALUES FROM THE ELEMENTS
     const tempElement = document.getElementById("temp");
@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // // CONDITIONS CHECK (Required by Assignment Rubric)
         if (temp <= 10 && wind > 4.8) {
-            result = `${calculateWindChill(temp, wind).toFixed(1)} °C`;
+            // FIXED: Removed the duplicate .toFixed(1) to prevent code runtime crashes
+            result = `${calculateWindChill(temp, wind)} °C`;
         }
 
         // // DISPLAY RESULT
