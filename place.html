@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guatemala Country Page</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Guatemala</h1>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/guatemala-large.webp" media="(min-width: 768px)">
+                <img src="images/guatemala-small.webp" alt="Guatemala landscape">
+            </picture>
+        </section>
+
+        <!-- DATA -->
+        <section class="data">
+            <h2>Country Data</h2>
+
+            <img src="images/flag-guatemala.webp" alt="Guatemala Flag" class="flag">
+
+            <ul>
+                <li>Capital: Guatemala City</li>
+                <li>Population: 17.9M</li>
+                <li>Area: 108,889 km²</li>
+                <li>Languages: Spanish, Mayan</li>
+                <li>Currency: Quetzal</li>
+                <li>Time Zone: UTC -6</li>
+            </ul>
+        </section>
+
+        <!-- WEATHER -->
+        <section class="weather">
+            <h2>Weather</h2>
+
+            <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+
+            <p>Temperature: <span id="temp">24</span> °C</p>
+            <p>Wind Speed: <span id="wind">10</span> km/h</p>
+
+            <p>Wind Chill: <span id="windchill"></span></p>
+        </section>
+
+        <!-- EXTRA IMAGES -->
+        <section class="highlights">
+            <h2>Highlights</h2>
+
+            <img src="images/volcan-fuego.webp" alt="Volcan Fuego">
+            <img src="images/lake-atitlan.webp" alt="Lake Atitlán">
+            <img src="images/antigua.webp" alt="Antigua Guatemala">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Guatemala Page</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

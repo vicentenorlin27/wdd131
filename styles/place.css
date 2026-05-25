@@ -1,0 +1,46 @@
+:root {
+    --primary: #4997D0;
+    --secondary: #ffffff;
+    --accent: #0033A0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    padding: 1rem;
+}
+
+.weather h2::after {
+    content: " ⛅";
+}
+
+.weather-icon {
+    width: 50px;
+}
+
+.highlights img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+}
