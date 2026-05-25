@@ -5,73 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guatemala Country Page</title>
-
+    <meta name="description"
+        content="W03 Country Page Assignment showcasing Guatemala data, images, and dynamic weather tracking.">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
-
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
-
     <header>
         <h1>Guatemala</h1>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="place.html" class="active">Guatemala</a>
+            <a href="temples.html">Temples</a>
+        </nav>
     </header>
 
     <main>
-
-        <!-- HERO -->
         <section class="hero">
             <picture>
                 <source srcset="images/guatemala-large.webp" media="(min-width: 768px)">
-                <img src="images/guatemala-small.webp" alt="Guatemala landscape">
+                <img src="images/guatemala-small.webp" alt="Beautiful mountain landscape of Guatemala" loading="lazy">
             </picture>
         </section>
 
-        <!-- DATA -->
         <section class="data">
             <h2>Country Data</h2>
-
-            <img src="images/flag-guatemala.webp" alt="Guatemala Flag" class="flag">
-
+            <img src="images/flag-guatemala.webp" alt="Guatemala Flag" class="flag-icon">
             <ul>
-                <li>Capital: Guatemala City</li>
-                <li>Population: 17.9M</li>
-                <li>Area: 108,889 km²</li>
-                <li>Languages: Spanish, Mayan</li>
-                <li>Currency: Quetzal</li>
-                <li>Time Zone: UTC -6</li>
+                <li><span class="label">Capital:</span> Guatemala City</li>
+                <li><span class="label">Population:</span> 17.9M</li>
+                <li><span class="label">Area:</span> 108,889 km²</li>
+                <li><span class="label">Languages:</span> Spanish, Mayan</li>
+                <li><span class="label">Currency:</span> Quetzal</li>
+                <li><span class="label">Time Zone:</span> UTC -6</li>
             </ul>
         </section>
 
-        <!-- WEATHER -->
         <section class="weather">
             <h2>Weather</h2>
-
             <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
 
-            <p>Temperature: <span id="temp">24</span> °C</p>
-            <p>Wind Speed: <span id="wind">10</span> km/h</p>
-
-            <p>Wind Chill: <span id="windchill"></span></p>
+            <p><span class="label">Temperature:</span> <span id="temp">9</span> °C</p>
+            <p><span class="label">Conditions:</span> Partly Cloudy</p>
+            <p><span class="label">Wind Speed:</span> <span id="wind">10</span> km/h</p>
+            <p><span class="label">Wind Chill:</span> <span id="windchill"></span></p>
         </section>
 
-        <!-- EXTRA IMAGES -->
         <section class="highlights">
             <h2>Highlights</h2>
-
-            <img src="images/volcan-fuego.webp" alt="Volcan Fuego">
-            <img src="images/lake-atitlan.webp" alt="Lake Atitlán">
-            <img src="images/antigua.webp" alt="Antigua Guatemala">
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/volcan-fuego.webp" alt="Volcan Fuego" loading="lazy">
+                    <p>Volcán de Fuego</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/lake-atitlan.webp" alt="Lake Atitlan" loading="lazy">
+                    <p>Lake Atitlán</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/antigua.webp" alt="Antigua Guatemala" loading="lazy">
+                    <p>Antigua Guatemala</p>
+                </div>
+            </div>
         </section>
-
     </main>
 
     <footer>
-        <p>© <span id="year"></span> Guatemala Page</p>
+        <p>&copy; <span id="year"></span> | Guatemala Page | Rubia Magdelena Francesco</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
-
 </body>
 
 </html>

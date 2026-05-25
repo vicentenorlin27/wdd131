@@ -1,11 +1,11 @@
 @media (min-width: 768px) {
-
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        max-width: 1000px;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        max-width: 1100px;
         margin: auto;
+        padding: 2rem 1rem;
     }
 
     .hero {
@@ -14,12 +14,20 @@
 
     .highlights {
         grid-column: 1 / -1;
-        display: grid;
+    }
+
+    .gallery {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+    }
+
+    /* Requirement 5 & 6: Hide the mobile SVG and trigger the pseudo-element emoticon symbol */
+    .weather-icon {
+        display: none;
     }
 
     .weather h2::after {
-        content: " ⛅ Weather";
+        content: " ⛅";
+        font-size: 1.4rem;
+        vertical-align: middle;
     }
 }

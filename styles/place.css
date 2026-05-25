@@ -1,46 +1,137 @@
+/* --- GLOBAL DESIGN VARIABLES --- */
 :root {
-    --primary: #4997D0;
+    --primary: #1a5276;
+    /* Darkened flag blue for optimal AAA text contrast */
     --secondary: #ffffff;
-    --accent: #0033A0;
+    --accent: #006b3f;
+    /* Mayan Jade Green */
+    --text-color: #222222;
+    --card-bg: #ffffff;
+    --font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: #f4f7f9;
 }
 
 header {
-    background: var(--primary);
-    color: white;
+    background-color: var(--primary);
+    color: var(--secondary);
     text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    margin: 0 0 1rem 0;
+}
+
+/* Navigation Menu Links styling */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.navigation a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background-color: var(--accent);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     padding: 1rem;
 }
 
 .hero img {
     width: 100%;
+    height: auto;
     display: block;
+    border-radius: 8px;
 }
 
 section {
-    padding: 1rem;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.weather h2::after {
-    content: " ⛅";
+section h2 {
+    color: var(--primary);
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
 }
 
+.flag-icon {
+    display: block;
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.6rem;
+}
+
+.label {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Mobile View Weather Icon setup */
 .weather-icon {
-    width: 50px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 1rem 0;
 }
 
-.highlights img {
+/* Gallery Section Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.gallery-item img {
     width: 100%;
-    margin-top: 10px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.gallery-item p {
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+    font-weight: bold;
 }
 
 footer {
     text-align: center;
-    background: var(--primary);
-    color: white;
-    padding: 1rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
