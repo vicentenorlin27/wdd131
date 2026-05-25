@@ -101,3 +101,42 @@ footer {
         align-items: center;
     }
 }
+
+/* ==========================================================================
+   ADDED MODIFICATIONS FOR THE W03 COUNTRY PAGE LINKS
+   ========================================================================== */
+
+/* Gives your header menu link a unique accent background color so it stands out */
+nav a.nav-country-link {
+    background-color: #006b3f;
+    /* Deep Guatemala Jade Green */
+    font-weight: 700;
+}
+
+nav a.nav-country-link:hover {
+    background-color: #f77f00;
+    /* Stays consistent with your orange hover style */
+}
+
+/* Styles the link block button added to the bottom of the Guatemala Card */
+.card-btn-link {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    background-color: #003049;
+    /* Matches your core theme header color */
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.card-btn-link:hover {
+    background-color: #006b3f;
+    /* Changes to green on mouse hover */
+    color: #ffffff;
+}
