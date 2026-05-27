@@ -30,6 +30,18 @@
         padding: 1.2rem 0;
     }
 
+    /* RESPONSIVE ICON SWAP RULES FOR DESKTOP */
+    .weather-icon-svg {
+        display: none;
+        /* Hide SVG on desktop views */
+    }
+
+    .weather-icon-emoji {
+        display: inline-block;
+        /* Show emoticon emoji on desktop views */
+        font-size: 3.5rem;
+    }
+
     .weather-info {
         text-align: left;
     }

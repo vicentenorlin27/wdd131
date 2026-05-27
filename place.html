@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guatemala Country Page</title>
 
+    <!-- Meta elements for total audit compliance -->
     <meta name="description"
         content="An informational country profile page for Guatemala, highlighting its capital, population, climate weather metrics, and scenic landmark galleries.">
     <meta name="author" content="Norlin Vicente">
@@ -24,6 +25,7 @@
 
     <main>
 
+        <!-- HERO CONTAINER -->
         <div class="hero-container">
             <picture>
                 <source srcset="images/guatemala-large.webp" media="(min-width: 768px)">
@@ -31,8 +33,10 @@
             </picture>
         </div>
 
+        <!-- LAYOUT GRID COLUMNS -->
         <div class="content-columns">
 
+            <!-- DATA PANEL CARD -->
             <section class="card data-card">
                 <h2>Country Data</h2>
                 <div class="card-content">
@@ -48,10 +52,14 @@
                 </div>
             </section>
 
+            <!-- WEATHER PANEL CARD -->
             <section class="card weather-card">
                 <h2>Weather</h2>
                 <div class="card-content weather-layout">
-                    <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+                    <!-- Both icons added here with unique classes for responsive visibility control -->
+                    <img src="images/weather.svg" alt="Weather icon" class="weather-icon-svg">
+                    <span class="weather-icon-emoji">⛅</span>
+
                     <div class="weather-info">
                         <p><strong>Temperature:</strong> <span id="temp">5</span> °C</p>
                         <p><strong>Wind Speed:</strong> <span id="wind">10</span> km/h</p>
@@ -62,6 +70,7 @@
 
         </div>
 
+        <!-- HIGHLIGHTS BLOCK -->
         <section class="card gallery-card">
             <h2>Country Highlights</h2>
             <div class="gallery-grid">
