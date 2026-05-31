@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MOBILE-FIRST GLOBAL BASE STYLES - TEMPLE DIRECTORY ARCHITECTURE
+   CONSOLIDATED MOBILE-FIRST BASE STYLES - AUDIT COMPLIANT
    ========================================================================== */
 
 body {
@@ -9,7 +9,29 @@ body {
     color: #1e293b;
 }
 
-/* Gallery Grid Layout Structure */
+header {
+    background-color: #0f172a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    padding: 10px 20px;
+}
+
+h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+
+main h2 {
+    padding: 20px 20px 0 20px;
+    margin: 0;
+    color: #0f172a;
+}
+
+/* Main Gallery Grid Structure */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -19,7 +41,7 @@ body {
     margin: 0 auto;
 }
 
-/* Elegant Template Cards (Proximity & Repetition Alignment) */
+/* Temple Card Proximity & Design Blueprint */
 .temple-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -36,17 +58,14 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Card Heading Text Styling */
 .temple-card h3 {
     margin: 0;
     padding: 20px 20px 12px 20px;
     font-size: 1.35rem;
     color: #0f172a;
-    /* Strong contrast ratio */
     font-weight: 700;
 }
 
-/* Card Text Containers */
 .card-info {
     padding: 0 20px 20px 20px;
     flex-grow: 1;
@@ -59,7 +78,6 @@ body {
     line-height: 1.5;
 }
 
-/* Label Columns Structural Grid Alignment Hook */
 .temple-card .label {
     font-weight: 700;
     color: #0f172a;
@@ -67,7 +85,6 @@ body {
     width: 90px;
 }
 
-/* Clean Image Container Enclosures */
 .card-image-wrapper {
     position: relative;
     width: 100%;
@@ -82,11 +99,10 @@ body {
     display: block;
 }
 
-/* Mobile Responsive Dropdown Drawers Navigation Framework */
+/* Mobile Responsive Navigation Drawers */
 nav {
     display: none;
     flex-direction: column;
-    background-color: #0f172a;
 }
 
 nav.show {
@@ -120,4 +136,19 @@ nav a:hover {
 
 #menu.show::before {
     content: "✕";
+}
+
+/* Footer Section */
+footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 3px solid #38bdf8;
+}
+
+footer p {
+    margin: 6px 0;
 }

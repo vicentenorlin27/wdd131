@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Setup Footer Information
+    // 1. Footer Metadata Automation
     const currentYearSpan = document.getElementById("currentyear");
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lastModifiedPara.textContent = `Last Modified: ${document.lastModified}`;
     }
 
-    // 2. Responsive Mobile Menu Drawer Toggle
+    // 2. Mobile Responsive Menu Toggle Handler
     const menuButton = document.getElementById("menu");
     const navMenu = document.querySelector("nav");
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// 3. Perfect 10-Temple Array Structure (7 base items + 3 custom items)
+// 3. Exact 10-Temple Base Data Matrix Structure
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -73,7 +73,6 @@ const temples = [
         area: 116642,
         imageUrl: "images/temple4.jpg"
     },
-    // --- STUDENT ADDITIONS (Temples 8, 9, and 10 to satisfy rubric criteria) ---
     {
         templeName: "Madrid Spain",
         location: "Madrid, Spain",
@@ -93,18 +92,18 @@ const temples = [
         location: "Salt Lake City, Utah, United States",
         dedicated: "1893, April, 6",
         area: 382207,
-        imageUrl: "images/temple10.jpg" // Links natively to your 10th image file asset
+        imageUrl: "images/temple10.jpg"
     }
 ];
 
-// 4. Connect DOM targets
+// 4. Hook Target Containers
 const galleryContainer = document.querySelector(".gallery");
 const mainHeading = document.querySelector("main h2");
 
-// 5. Build Dynamic UI Cards (With required parameters and lazy-loading)
+// 5. Build Cards Dynamically with Explicit Aspect Metrics & Lazy-Loading
 function displayTemples(filteredList) {
     if (!galleryContainer) return;
-    galleryContainer.innerHTML = ""; // Wipe container clean
+    galleryContainer.innerHTML = "";
 
     filteredList.forEach(temple => {
         const card = document.createElement("section");
@@ -125,10 +124,10 @@ function displayTemples(filteredList) {
     });
 }
 
-// Draw full layout initially
+// Initial Call to render Home display layout
 displayTemples(temples);
 
-// 6. Navigation Event Filters Allocation Engine
+// 6. Navigation Event Filters Hook Allocation Engine
 const setupFilter = (selectorId, headingText, filterCondition) => {
     const element = document.querySelector(selectorId);
     if (element) {

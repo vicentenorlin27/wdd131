@@ -1,10 +1,8 @@
 /* ==========================================================================
-   DESKTOP VIEWPORT STYLES (Min-width: 768px)
+   DESKTOP VIEWPORT LAYOUT CHANGES (Min-width: 768px)
    ========================================================================== */
 
 @media (min-width: 768px) {
-
-    /* Main Layout Header Container */
     .header-container {
         display: flex;
         justify-content: space-between;
@@ -14,12 +12,12 @@
         padding: 10px 20px;
     }
 
-    /* Hide the mobile hamburger button completely on desktop screens */
+    /* Remove hamburger trigger toggle icon */
     #menu {
         display: none;
     }
 
-    /* Pull navigation links into a horizontal row instead of a vertical stack */
+    /* Transform menu flow into layout rows */
     nav {
         display: flex;
         flex-direction: row;
@@ -37,10 +35,7 @@
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-    /* SMOOTH TEMPLE SITE GRID GRID
-       This is what forces your page into clean, side-by-side columns on 
-       larger screens while adapting automatically depending on screen width.
-    */
+    /* Responsive Grid Multi-Column Footprint Matrix */
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 30px;
