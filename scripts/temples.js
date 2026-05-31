@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Footer Metadata Automation
+    // 1. Footer Metadata
     const currentYearSpan = document.getElementById("currentyear");
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lastModifiedPara.textContent = `Last Modified: ${document.lastModified}`;
     }
 
-    // 2. Mobile Responsive Menu Toggle Handler
+    // 2. Mobile Menu Toggle
     const menuButton = document.getElementById("menu");
     const navMenu = document.querySelector("nav");
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// 3. Exact 10-Temple Base Data Matrix Structure
+// 3. Complete Temple Array Matrix
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -96,11 +96,9 @@ const temples = [
     }
 ];
 
-// 4. Hook Target Containers
 const galleryContainer = document.querySelector(".gallery");
 const mainHeading = document.querySelector("main h2");
 
-// 5. Build Cards Dynamically with Explicit Aspect Metrics & Lazy-Loading
 function displayTemples(filteredList) {
     if (!galleryContainer) return;
     galleryContainer.innerHTML = "";
@@ -124,10 +122,10 @@ function displayTemples(filteredList) {
     });
 }
 
-// Initial Call to render Home display layout
+// Initial display setup
 displayTemples(temples);
 
-// 6. Navigation Event Filters Hook Allocation Engine
+// Filter registration
 const setupFilter = (selectorId, headingText, filterCondition) => {
     const element = document.querySelector(selectorId);
     if (element) {

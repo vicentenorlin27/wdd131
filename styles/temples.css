@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CONSOLIDATED MOBILE-FIRST BASE STYLES - ZERO AUDIT ERRORS
+   CONSOLIDATED MOBILE-FIRST BASE STYLES - ZERO REPEATED RULES
    ========================================================================== */
 
 body {
@@ -31,7 +31,7 @@ main h2 {
     color: #0f172a;
 }
 
-/* Main Gallery Layout Construction */
+/* Main Gallery Dynamic Grid Layout Structure */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -41,7 +41,7 @@ main h2 {
     margin: 0 auto;
 }
 
-/* Elegant Template Cards Structure (Proximity & Repetition Principles) */
+/* Template Cards Design Structure */
 .temple-card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -99,7 +99,7 @@ main h2 {
     display: block;
 }
 
-/* Mobile Responsive Dropdown Navigation (Consolidated) */
+/* Mobile Responsive Dropdown Navigation Structure */
 nav {
     display: none;
     flex-direction: column;
@@ -138,7 +138,7 @@ nav a:hover {
     content: "✕";
 }
 
-/* Consolidated Footer Area */
+/* Base Footer Section Structure */
 footer {
     background-color: #0f172a;
     color: #cbd5e1;
