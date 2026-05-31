@@ -1,40 +1,63 @@
-/* Gallery Container Grid Rule */
+/* ==========================================================================
+   GALLERY AND CARD DESIGN STRUCTURE FIX 
+   ========================================================================== */
+
+/* 1. Main Gallery Grid Structure */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Individual Card Blocks */
+/* 2. Beautiful & Clean Card Formatting */
 .temple-card {
     background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e4ec;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
 }
 
+/* 3. Temple Name Heading - Stands out clearly */
 .temple-card h3 {
-    margin-top: 0;
-    color: #002147;
-    border-bottom: 2px solid #e7e7e7;
-    padding-bottom: 5px;
+    margin: 0 0 16px 0;
+    color: #102a43;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 8px;
 }
 
+/* 4. Formatting the Text Details (Location, Dedicated, Area) */
 .temple-card p {
     margin: 6px 0;
+    font-size: 1rem;
+    /* Enlarges the text so it is highly readable */
+    color: #486581;
+    line-height: 1.5;
 }
 
+/* Bold Labels to create a professional visual structure */
 .temple-card .label {
-    font-weight: bold;
-    color: #333;
+    font-weight: 700;
+    color: #102a43;
+    display: inline-block;
+    width: 95px;
+    /* Perfectly aligns the labels in a neat column! */
 }
 
+/* 5. Responsive Temple Image Elements */
 .temple-card img {
     width: 100%;
-    height: auto;
+    height: 240px;
     object-fit: cover;
-    border-radius: 4px;
-    margin-top: 10px;
+    margin-top: 16px;
+    border-radius: 6px;
+    border: 1px solid #e0e4ec;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
