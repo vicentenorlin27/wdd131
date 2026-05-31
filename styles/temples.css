@@ -1,124 +1,40 @@
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    background-color: #f4f7f6;
-    color: #333333;
-}
-
-/* HEADER */
-header {
-    background-color: #00334e;
-    color: #ffffff;
-    padding: 1rem;
-}
-
-/* HEADER CONTAINER */
-.header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-h1 {
-    margin: 0;
-}
-
-/* HAMBURGER MENU */
-#menu {
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-#menu::before {
-    content: "☰";
-}
-
-#menu.show::before {
-    content: "✕";
-}
-
-/* NAVIGATION */
-nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-}
-
-nav.show {
-    display: flex;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.8rem;
-    text-align: center;
-}
-
-/* ACTIVE LINK (FIXED CONTRAST) */
-nav a.active {
-    background-color: #ffffff;
-    color: #00334e;
-    border-radius: 4px;
-}
-
-/* HOVER (FIXED CONTRAST ISSUE) */
-nav a:hover {
-    background-color: #ffffff;
-    color: #00334e;
-    border-radius: 4px;
-}
-
-/* MAIN */
-main {
-    max-width: 90%;
-    margin: 2rem auto;
-}
-
-h2 {
-    text-align: center;
-}
-
-/* GALLERY GRID */
+/* Gallery Container Grid Rule */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* FIGURES */
-figure {
-    margin: 0;
+/* Individual Card Blocks */
+.temple-card {
     background-color: #ffffff;
+    border: 1px solid #ddd;
     border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-figure img {
+.temple-card h3 {
+    margin-top: 0;
+    color: #002147;
+    border-bottom: 2px solid #e7e7e7;
+    padding-bottom: 5px;
+}
+
+.temple-card p {
+    margin: 6px 0;
+}
+
+.temple-card .label {
+    font-weight: bold;
+    color: #333;
+}
+
+.temple-card img {
     width: 100%;
-    height: 250px;
+    height: auto;
     object-fit: cover;
-    display: block;
-}
-
-figcaption {
-    padding: 1rem;
-    text-align: center;
-}
-
-/* FOOTER */
-footer {
-    background-color: #00334e;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    border-radius: 4px;
+    margin-top: 10px;
 }
