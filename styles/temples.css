@@ -1,63 +1,123 @@
 /* ==========================================================================
-   GALLERY AND CARD DESIGN STRUCTURE FIX 
+   MOBILE-FIRST GLOBAL BASE STYLES - TEMPLE DIRECTORY ARCHITECTURE
    ========================================================================== */
 
-/* 1. Main Gallery Grid Structure */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f4f6f9;
+    color: #1e293b;
+}
+
+/* Gallery Grid Layout Structure */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* 2. Beautiful & Clean Card Formatting */
+/* Elegant Template Cards (Proximity & Repetition Alignment) */
 .temple-card {
     background-color: #ffffff;
-    border: 1px solid #e0e4ec;
     border-radius: 8px;
-    padding: 24px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* 3. Temple Name Heading - Stands out clearly */
+.temple-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Heading Text Styling */
 .temple-card h3 {
-    margin: 0 0 16px 0;
-    color: #102a43;
-    font-size: 1.4rem;
+    margin: 0;
+    padding: 20px 20px 12px 20px;
+    font-size: 1.35rem;
+    color: #0f172a;
+    /* Strong contrast ratio */
     font-weight: 700;
-    border-bottom: 2px solid #f0f4f8;
-    padding-bottom: 8px;
 }
 
-/* 4. Formatting the Text Details (Location, Dedicated, Area) */
+/* Card Text Containers */
+.card-info {
+    padding: 0 20px 20px 20px;
+    flex-grow: 1;
+}
+
 .temple-card p {
-    margin: 6px 0;
-    font-size: 1rem;
-    /* Enlarges the text so it is highly readable */
-    color: #486581;
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #475569;
     line-height: 1.5;
 }
 
-/* Bold Labels to create a professional visual structure */
+/* Label Columns Structural Grid Alignment Hook */
 .temple-card .label {
     font-weight: 700;
-    color: #102a43;
+    color: #0f172a;
     display: inline-block;
-    width: 95px;
-    /* Perfectly aligns the labels in a neat column! */
+    width: 90px;
 }
 
-/* 5. Responsive Temple Image Elements */
+/* Clean Image Container Enclosures */
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background-color: #e2e8f0;
+}
+
 .temple-card img {
     width: 100%;
-    height: 240px;
+    height: 100%;
     object-fit: cover;
-    margin-top: 16px;
-    border-radius: 6px;
-    border: 1px solid #e0e4ec;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: block;
+}
+
+/* Mobile Responsive Dropdown Drawers Navigation Framework */
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: #0f172a;
+}
+
+nav.show {
+    display: flex;
+}
+
+nav a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #1e293b;
+}
+
+nav a:hover {
+    background-color: #1e293b;
+}
+
+#menu {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.show::before {
+    content: "✕";
 }
