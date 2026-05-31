@@ -12,12 +12,10 @@
         padding: 10px 20px;
     }
 
-    /* Remove hamburger trigger toggle icon */
     #menu {
         display: none;
     }
 
-    /* Transform menu flow into layout rows */
     nav {
         display: flex;
         flex-direction: row;
@@ -35,7 +33,6 @@
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-    /* Responsive Grid Multi-Column Footprint Matrix */
     .gallery {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 30px;
