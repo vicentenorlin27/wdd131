@@ -1,121 +1,47 @@
-/* ==========================================================================
-ORIGINAL MAIN THEME & TEMPLE COMPONENT LAYOUT
-========================================================================== */
+<!DOCTYPE html>
+<html lang="en">
 
-/* Original Blue Header Branding */
-header {
-background-color: #003049;
-padding: 1rem;
-text-align: center;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Temple Picture Album Directory</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals assignment featuring a responsive, interactive temple gallery with native lazy-loading image filtering capabilities.">
+    <meta name="author" content="Vicente Norlin">
 
-header h1 {
-color: #ffffff;
-}
+    <!-- LINK THE EXTERNAL STYLESHEETS CORRECTLY -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
 
-main h2 {
-text-align: center;
-color: #003049;
-margin-top: 1.5rem;
-}
+    <!-- CORE INTERACTION MECHANIC -->
+    <script src="scripts/temples.js" defer></script>
+</head>
 
-/* Navigation Drawer Base Configuration */
-nav {
-display: none;
-flex-direction: column;
-background-color: #003049;
-margin-top: 1rem;
-}
+<body>
+    <header>
+        <h1>Temple Album Directory</h1>
+        <button id="menu" aria-label="Toggle Menu Navigation"></button>
+        <nav>
+            <a href="#" id="nav-home">Home</a>
+            <a href="#" id="nav-old">Old</a>
+            <a href="#" id="nav-new">New</a>
+            <a href="#" id="nav-large">Large</a>
+            <a href="#" id="nav-small">Small</a>
+        </nav>
+    </header>
 
-nav.show {
-display: flex;
-}
+    <main>
+        <h2>Home</h2>
+        <div class="gallery">
+            <!-- Dynamic temple cards will build and render here automatically via JavaScript -->
+        </div>
+    </main>
 
-nav a {
-color: #ffffff;
-padding: 0.75rem 1rem;
-text-decoration: none;
-font-weight: 400;
-text-align: center;
-transition: background-color 0.3s;
-}
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Vicente Norlin | Chile</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
 
-nav a:hover, nav a.active {
-background-color: #f77f00;
-}
-
-/* Mobile Hamburger Trigger */
-#menu {
-background: none;
-border: none;
-color: #ffffff;
-font-size: 2rem;
-cursor: pointer;
-margin-top: 0.5rem;
-}
-
-#menu::before {
-content: "☰";
-}
-
-#menu.show::before {
-content: "✕";
-}
-
-/* Temple Picture Album Gallery Grid */
-.gallery {
-display: grid;
-grid-template-columns: 1fr;
-gap: 20px;
-padding: 20px;
-max-width: 1200px;
-margin: 0 auto;
-}
-
-/* Original Card Framing */
-.temple-card {
-background: #ffffff;
-border: 1px solid #ddd;
-border-radius: 5px;
-padding: 15px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.temple-card h3 {
-margin-top: 0;
-color: #003049;
-border-bottom: 2px solid #f77f00;
-padding-bottom: 5px;
-}
-
-.card-info p {
-margin: 5px 0;
-font-size: 0.95rem;
-}
-
-.card-info .label {
-font-weight: bold;
-color: #333;
-}
-
-.card-image-wrapper {
-margin-top: 10px;
-width: 100%;
-height: 200px;
-overflow: hidden;
-}
-
-.temple-card img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-/* Base Footer Section */
-footer {
-background-color: #003049;
-color: #ffffff;
-text-align: center;
-padding: 1rem;
-margin-top: 2rem;
-}
+</html>
