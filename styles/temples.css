@@ -12,19 +12,25 @@ header {
     /* Distinct crisp orange brand accent line */
 }
 
-header h1 {
-    color: #ffffff;
+/* Main Heading Typography (Now styled inside <main> element) */
+main h1 {
+    text-align: center;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #003049;
+    margin-top: 1.5rem;
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: -0.5px;
 }
 
+/* Subheading Subtitle Layout */
 main h2 {
     text-align: center;
-    color: #003049;
-    margin-top: 2rem;
-    font-size: 1.6rem;
-    font-weight: 600;
+    color: #475569;
+    /* Soft gray color for a clean professional subtitle look */
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
 /* Mobile Dropdown Navigation System */
