@@ -1,29 +1,41 @@
 /* ==========================================================================
-   TEMPLE COMPONENT LAYOUT - MAIN ORIGINAL BRANDING THEME
+   FORMAL VISUAL INTERFACE SHEET - COMPLIANT DESIGN LAYER
    ========================================================================== */
 
+/* Premium Formal Corporate Header */
 header {
     background-color: #003049;
-    padding: 1rem;
+    /* Original deep blue canvas color */
+    padding: 1.25rem 1rem;
     text-align: center;
+    border-bottom: 3px solid #f77f00;
+    /* Distinct crisp orange brand accent line */
 }
 
 header h1 {
     color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
 }
 
 main h2 {
     text-align: center;
     color: #003049;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
-/* Navigation Drawer Configuration */
+/* Mobile Dropdown Navigation System */
 nav {
     display: none;
     flex-direction: column;
-    background-color: #003049;
+    background-color: #002336;
+    /* Darker clean slate contrast panel */
     margin-top: 1rem;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 nav.show {
@@ -32,19 +44,22 @@ nav.show {
 
 nav a {
     color: #ffffff;
-    padding: 0.75rem 1rem;
+    padding: 0.9rem 1rem;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: all 0.25s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 nav a:hover,
 nav a.active {
     background-color: #f77f00;
+    /* Original premium vibrant orange highlight */
+    color: #ffffff;
 }
 
-/* Mobile Hamburger Trigger Toggle button */
+/* Formal Clean Interactive Navigation Hamburger Menu */
 #menu {
     background: none;
     border: none;
@@ -52,6 +67,11 @@ nav a.active {
     font-size: 2rem;
     cursor: pointer;
     margin-top: 0.5rem;
+    transition: color 0.2s;
+}
+
+#menu:hover {
+    color: #f77f00;
 }
 
 #menu::before {
@@ -59,50 +79,66 @@ nav a.active {
 }
 
 #menu.show::before {
-    content: "X";
+    content: "✕";
 }
 
-/* Temple Picture Album Gallery Responsive Matrix */
+/* Premium Component Grid Layout Frame */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Original Card Framing Structure */
+/* Clean, Crisp Formal Content Display Cards */
 .temple-card {
     background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    /* Soft luxury gray frame border line */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.temple-card:hover {
+    transform: translateY(-4px);
+    /* Premium elevator elevation on mouse hover */
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
 }
 
 .temple-card h3 {
     margin-top: 0;
     color: #003049;
-    border-bottom: 2px solid #f77f00;
-    padding-bottom: 5px;
+    font-size: 1.35rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    font-weight: 600;
 }
 
 .card-info p {
-    margin: 5px 0;
+    margin: 8px 0;
     font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
 }
 
 .card-info .label {
-    font-weight: bold;
-    color: #333;
+    font-weight: 600;
+    color: #003049;
+    display: inline-block;
+    width: 90px;
 }
 
 .card-image-wrapper {
-    margin-top: 10px;
+    margin-top: 15px;
     width: 100%;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid #f1f5f9;
 }
 
 .temple-card img {
@@ -111,11 +147,18 @@ nav a.active {
     object-fit: cover;
 }
 
-/* Base Footer Section */
+/* Formal Corporate Footer Strip */
 footer {
     background-color: #003049;
-    color: #ffffff;
+    color: #cbd5e1;
+    /* Sharp silver tone readable text color */
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    border-top: 4px solid #f77f00;
+}
+
+footer p {
+    margin: 4px 0;
 }
