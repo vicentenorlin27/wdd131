@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Estimator - Vicente Construction</title>
+    <meta name="description"
+        content="Calculate your building costs in real-time with our interactive JavaScript project calculator tool.">
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body>
+    <header>
+        <h1>Interactive Project Estimator</h1>
+        <p>Real-Time Cost Projections</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Project Gallery</a>
+        <a href="estimator.html">Cost Estimator</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Calculate Your Baseline Construction Cost</h2>
+            <form id="calc-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label Lothar for="service-type">Select Construction Service:</label>
+                    <select id="service-type" required>
+                        <option value="drywall">Drywall Installation ($60 / Unit)</option>
+                        <option value="framing">Timber Wood Framing ($85 / Unit)</option>
+                        <option value="finishing">Premium Surface Finishing ($45 / Unit)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dimensions">Project Scope Area Size (In Total Units / SqFt):</label>
+                    <input type="number" id="dimensions" min="1" max="10000" placeholder="e.g. 150" required>
+                </div>
+                <div class="form-group">
+                    <label>Optional Service Add-ons:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="paint-opt" value="15">
+                        <label for="paint-opt">Add Premium Waterproof Painting Layer (+$15 / Unit)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="cleanup-opt" value="100">
+                        <label for="cleanup-opt">Add Post-Project Commercial Cleanup Fee (+$100 Flat)</label>
+                    </div>
+                </div>
+            </form>
+
+            <div id="output-box">
+                <h3>Calculation Summary:</h3>
+                <div id="calc-result">Please enter your project dimensions above to view your estimate.</div>
+                <div id="visit-counter"
+                    style="margin-top: 1rem; font-style: italic; font-size: 0.85rem; color: #64748b;"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> | Norlin Vicente | Guatemala City | <a href="references.html">Project
+                References</a></p>
+    </footer>
+    <script src="scripts/estimator.js"></script>
+</body>
+
+</html>
