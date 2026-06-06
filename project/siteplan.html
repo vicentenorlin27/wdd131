@@ -4,99 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Plan - Vicente Construction &amp; Estimator Guide</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            color: #1e293b;
-        }
-
-        h1,
-        h2 {
-            color: #0f172a;
-            border-bottom: 2px solid #d97706;
-            padding-bottom: 0.3rem;
-        }
-
-        .color-box {
-            display: inline-block;
-            width: 100px;
-            height: 50px;
-            margin-right: 10px;
-            border: 1px solid #000;
-            vertical-align: middle;
-        }
-    </style>
+    <title>Product Review Form</title>
+    <meta name="description"
+        content="Product Review Form for WDD131, dynamically loading product lists and utilizing localStorage to track submissions.">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Website Planning Document: Vicente Construction</h1>
-        <p>Prepared by: Norlin Vicente</p>
+        <h1>Product Review</h1>
     </header>
     <main>
-        <section>
-            <h2>Site Name</h2>
-            <p><strong>Vicente Construction &amp; Estimator Guide</strong></p>
-            <p><em>Reasoning:</em> The name directly identifies the contractor identity while highlighting the unique
-                interactive calculation utility tool that helps users estimate costs instantly.</p>
-        </section>
+        <form method="get" action="review.html">
+            <fieldset>
+                <legend>Product Selection</legend>
+                <label for="productName">Product Name <span class="required">*</span></label>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Choose a Product...</option>
+                </select>
+            </fieldset>
 
-        <section>
-            <h2>Site Purpose</h2>
-            <p>The purpose of this site is twofold: first, to present a professional service portfolio for residential
-                and commercial construction (framing, drywall, and finishing) in Guatemala City. Second, it provides
-                clients an interactive cost calculator to dynamically estimate budgets based on area dimensions,
-                reducing negotiation barriers.</p>
-        </section>
+            <fieldset>
+                <legend>Your Assessment</legend>
+                <div class="rating-label">Overall Rating <span class="required">*</span></div>
+                <div class="rating-container">
+                    <label><input type="radio" name="rating" value="1" required> 1 ★</label>
+                    <label><input type="radio" name="rating" value="2"> 2 ★</label>
+                    <label><input type="radio" name="rating" value="3"> 3 ★</label>
+                    <label><input type="radio" name="rating" value="4"> 4 ★</label>
+                    <label><input type="radio" name="rating" value="5"> 5 ★</label>
+                </div>
 
-        <section>
-            <h2>Target Audience</h2>
-            <p><strong>Primary Audience:</strong> Homeowners, real estate property managers, and independent interior
-                renovators looking for quick, high-precision structural repair, drywall partition builds, or framing
-                services. They value transparent pricing and timeline guarantees.</p>
-        </section>
+                <label for="installationDate">Date of Installation <span class="required">*</span></label>
+                <input type="date" id="installationDate" name="installationDate" required>
 
-        <section>
-            <h2>Three Persona Scenarios</h2>
-            <ol>
-                <li><strong>Scenario 1:</strong> Carlos, a local homeowner, wants to install a new drywall separation
-                    panel in his basement. He needs to know roughly how much materials and basic labor will cost before
-                    calling for an on-site visit.</li>
-                <li><strong>Scenario 2:</strong> Maria, a small shop renovator, needs commercial timber framing work
-                    completed within two weeks. She wants to see photographic evidence of past framing quality and
-                    structural safety standard declarations.</li>
-                <li><strong>Scenario 3:</strong> Alejandro, a busy landlord, needs clean surface finishing work done
-                    across three rental rooms. He wants to submit a project evaluation review online and check general
-                    flat-fee estimates on his mobile phone.</li>
-            </ol>
-        </section>
+                <div class="features-label">Features Useful to You (Check all that apply)</div>
+                <div class="checkbox-container">
+                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                    <label><input type="checkbox" name="features" value="easeOfUse"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                </div>
+            </fieldset>
 
-        <section>
-            <h2>Color Palette</h2>
-            <p>
-            <div class="color-box" style="background-color: #d97706;"></div> <strong>Primary Accent:</strong> Industrial
-            Amber (#d97706) - Represents active safety, construction machinery, and clear interaction focal points.</p>
-            <p>
-            <div class="color-box" style="background-color: #0f172a;"></div> <strong>Secondary Base:</strong> Steel
-            Slate Navy (#0f172a) - Establishes engineering authority, professional trust, and readable typography.</p>
-            <p>
-            <div class="color-box" style="background-color: #f8fafc;"></div> <strong>Background Canvas:</strong> Soft
-            Off-White (#f8fafc) - Ensures a clean, modern aesthetic with high readability contrast scores.</p>
-        </section>
+            <fieldset>
+                <legend>Review Details</legend>
+                <label for="writtenReview">Written Review</label>
+                <textarea id="writtenReview" name="writtenReview" rows="4"
+                    placeholder="Share your experience with this product..."></textarea>
 
-        <section>
-            <h2>Typography (Fonts)</h2>
-            <p><strong>Heading Font:</strong> 'Segoe UI', Tahoma, sans-serif - Bold, clean industrial structure
-                mimicking commercial structural blueprints.</p>
-            <p><strong>Body Font:</strong> Verdana, Geneva, sans-serif - Highly legible sans-serif font variant to
-                optimize reading numeric parameters and forms on any device size.</p>
-        </section>
+                <label for="userName">Your Name</label>
+                <input type="text" id="userName" name="userName" placeholder="Optional">
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
     </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Norlin Vicente | Guatemala City</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>
