@@ -4,389 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Planning Document - Vicente Construction &amp; Estimator Guide</title>
-    <meta name="description"
-        content="W05 Website Planning Document outlining project scope, design parameters, color palette, typography selection, and structured layouts for Vicente Construction &amp; Estimator Guide.">
-    <meta name="author" content="Norlin Vicente">
+    <title>Website Plan - Vicente Construction &amp; Estimator Guide</title>
     <style>
-        /* COLOR PALETTE & DESIGN SYSTEM DECLARATION
-           These CSS Custom Properties define the design system for both this site plan 
-           and the subsequent dynamic web application pages.
-        */
-        :root {
-            --primary-color: #d97706;
-            /* Industrial Amber - stands for premium construction, safety, and energy */
-            --secondary-color: #0f172a;
-            /* Steel Slate Navy - represents professional contracting and solid foundations */
-            --dark-neutral: #1e293b;
-            /* Dark Charcoal - applied to clean text headers and primary structural elements */
-            --light-neutral: #f8fafc;
-            /* Clean Soft Off-White - applied to main page canvas backgrounds */
-            --card-background: #ffffff;
-            /* Pure White - isolates visual text blocks and structured panels */
-            --text-main: #334155;
-            /* Slate Charcoal Gray - ideal for maximum accessibility text contrast */
-            --border-accent: #e2e8f0;
-            /* Soft slate rule color for layouts */
-        }
-
-        /* Base Resets */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light-neutral);
-            color: var(--text-main);
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            padding: 2.5rem 1.5rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            color: #1e293b;
         }
 
-        header {
-            background-color: var(--secondary-color);
-            color: #ffffff;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
-            border-bottom: 5px solid var(--primary-color);
+        h1,
+        h2 {
+            color: #0f172a;
+            border-bottom: 2px solid #d97706;
+            padding-bottom: 0.3rem;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        header p {
-            color: var(--primary-color);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.95rem;
-            letter-spacing: 1.5px;
-        }
-
-        main {
-            max-width: 1050px;
-            margin: 0 auto;
-        }
-
-        /* Content Card Panels */
-        section {
-            background-color: var(--card-background);
-            padding: 2.5rem;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border-left: 5px solid var(--primary-color);
-        }
-
-        section h2 {
-            color: var(--dark-neutral);
-            font-size: 1.6rem;
-            margin-bottom: 1.25rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border-accent);
-        }
-
-        section p {
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-        }
-
-        strong {
-            color: var(--dark-neutral);
-        }
-
-        ul {
-            list-style-type: none;
-            margin-bottom: 1rem;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 1.05rem;
-        }
-
-        ul li::before {
-            content: "🏗️";
-            position: absolute;
-            left: 0;
-            font-size: 0.95rem;
-        }
-
-        /* Color Guide Elements */
-        .palette-display {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .color-swatch {
-            border: 1px solid var(--border-accent);
-            border-radius: 6px;
-            overflow: hidden;
-            background-color: var(--card-background);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-        }
-
-        .swatch-block {
-            height: 100px;
-        }
-
-        .swatch-details {
-            padding: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .swatch-details h4 {
-            color: var(--dark-neutral);
-            margin-bottom: 0.25rem;
-        }
-
-        /* Wireframe Structural Maps */
-        .wireframe-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            margin-top: 1.5rem;
-        }
-
-        @media (max-width: 800px) {
-            .wireframe-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .wireframe-pane {
-            border: 2px dashed #94a3b8;
-            background-color: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 6px;
-        }
-
-        .wireframe-pane h3 {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: var(--dark-neutral);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .wire-block {
-            background-color: #cbd5e1;
-            border: 1px solid #94a3b8;
-            text-align: center;
-            padding: 0.75rem 0.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #475569;
-            border-radius: 4px;
-        }
-
-        .wire-flex-row {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .wire-flex-row .wire-block {
-            flex: 1;
-            margin-bottom: 0;
-        }
-
-        .wire-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .wire-grid-3 .wire-block {
-            margin-bottom: 0;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 1.5rem;
-            border-top: 2px solid var(--border-accent);
-            font-size: 0.95rem;
-            color: #64748b;
+        .color-box {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            margin-right: 10px;
+            border: 1px solid #000;
+            vertical-align: middle;
         }
     </style>
 </head>
 
 <body>
-
     <header>
-        <h1>Website Planning Document</h1>
-        <p>Vicente Construction &amp; Estimator Guide</p>
+        <h1>Website Planning Document: Vicente Construction</h1>
+        <p>Prepared by: Norlin Vicente</p>
     </header>
-
     <main>
         <section>
             <h2>Site Name</h2>
-            <p><strong>Proposed Site Identifier:</strong> Vicente Construction &amp; Estimator Guide</p>
-            <p><strong>Branding &amp; Domain Selection Rationale:</strong> This name combines personal professional
-                accountability with immediate utilitarian intent. It communicates local business craftsmanship to
-                clients looking for property installation services (drywall, framing, structural modifications), while
-                making it clear that the platform provides automated budgeting tools to prevent unexpected project
-                costs.</p>
-            <p style="margin-top: 0.75rem; font-style: italic;">Optional Domain Availability Match:
-                vicenteconstruction.com</p>
+            <p><strong>Vicente Construction &amp; Estimator Guide</strong></p>
+            <p><em>Reasoning:</em> The name directly identifies the contractor identity while highlighting the unique
+                interactive calculation utility tool that helps users estimate costs instantly.</p>
         </section>
 
         <section>
             <h2>Site Purpose</h2>
-            <p>The site serves as a responsive utility page for a localized contracting business. It highlights
-                professional craftsmanship while featuring a real-time JavaScript project cost estimator. This tool lets
-                prospective clients choose a specific service from a dropdown menu, type in quantitative work dimensions
-                (such as square footage or count values), select conditional project add-ons via checkboxes, and see an
-                instant price projection rendered immediately to the DOM.</p>
+            <p>The purpose of this site is twofold: first, to present a professional service portfolio for residential
+                and commercial construction (framing, drywall, and finishing) in Guatemala City. Second, it provides
+                clients an interactive cost calculator to dynamically estimate budgets based on area dimensions,
+                reducing negotiation barriers.</p>
         </section>
 
         <section>
-            <h2>Target Audience Scenarios</h2>
-            <p>The layout and data tracking parameters on the platform address specific logistical tasks raised by
-                target homeowners and developers:</p>
-            <ul>
-                <li><strong>Scenario 1:</strong> "I am a property owner looking to install premium drywall panels or new
-                    timber framing across an 800 sq ft home addition. Where can I instantly input my custom dimensional
-                    parameters to calculate real-time baseline material and labor cost estimates?"</li>
-                <li><strong>Scenario 2:</strong> "I need to request a formal on-site structural sign-off from Vicente
-                    Construction. Where is the validation form where I can save my selected estimate options and contact
-                    details across browser sessions?"</li>
-            </ul>
+            <h2>Target Audience</h2>
+            <p><strong>Primary Audience:</strong> Homeowners, real estate property managers, and independent interior
+                renovators looking for quick, high-precision structural repair, drywall partition builds, or framing
+                services. They value transparent pricing and timeline guarantees.</p>
         </section>
 
         <section>
-            <h2>Color Schema</h2>
-            <p>The visual system leverages professional contracting tones. This exact color system is implemented across
-                the text blocks, borders, panels, and elements of this site plan document:</p>
-
-            <div class="palette-display">
-                <div class="color-swatch">
-                    <div class="swatch-block" style="background-color: #d97706;"></div>
-                    <div class="swatch-details">
-                        <h4>Industrial Amber (#d97706)</h4>
-                        <p>Applied to primary structural borders, layout badges, checkbox labels, and active interactive
-                            elements.</p>
-                    </div>
-                </div>
-                <div class="color-swatch">
-                    <div class="swatch-block" style="background-color: #0f172a;"></div>
-                    <div class="swatch-details">
-                        <h4>Steel Slate Navy (#0f172a)</h4>
-                        <p>Used for site headings, global navigation backdrops, buttons, and high-contrast master panel
-                            structures.</p>
-                    </div>
-                </div>
-                <div class="color-swatch">
-                    <div class="swatch-block" style="background-color: #f8fafc; border-bottom: 1px solid #cbd5e1;">
-                    </div>
-                    <div class="swatch-details">
-                        <h4>Clean Off-White (#f8fafc)</h4>
-                        <p>Provides a clean, uncluttered background background across all screens to ensure high
-                            accessibility contrast ratios.</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Three Persona Scenarios</h2>
+            <ol>
+                <li><strong>Scenario 1:</strong> Carlos, a local homeowner, wants to install a new drywall separation
+                    panel in his basement. He needs to know roughly how much materials and basic labor will cost before
+                    calling for an on-site visit.</li>
+                <li><strong>Scenario 2:</strong> Maria, a small shop renovator, needs commercial timber framing work
+                    completed within two weeks. She wants to see photographic evidence of past framing quality and
+                    structural safety standard declarations.</li>
+                <li><strong>Scenario 3:</strong> Alejandro, a busy landlord, needs clean surface finishing work done
+                    across three rental rooms. He wants to submit a project evaluation review online and check general
+                    flat-fee estimates on his mobile phone.</li>
+            </ol>
         </section>
 
         <section>
-            <h2>Typography</h2>
-            <p>The semantic styles use web-safe sans-serif fonts to make complex calculation values easy to scan and
-                read:</p>
-            <ul>
-                <li><strong>Heading Structure Elements (h1, h2, h3):</strong>
-                    <code>'Segoe UI', Tahoma, sans-serif</code> — Provides a solid, balanced weight that immediately
-                    mirrors industrial precision and modern business layout structures.</li>
-                <li><strong>Body Content / Estimator Form Controls:</strong> <code>Verdana, Geneva, sans-serif</code> —
-                    Chosen for clean character widths that keep numeric inputs and calculated costs clearly readable
-                    across both mobile devices and large monitors.</li>
-            </ul>
+            <h2>Color Palette</h2>
+            <p>
+            <div class="color-box" style="background-color: #d97706;"></div> <strong>Primary Accent:</strong> Industrial
+            Amber (#d97706) - Represents active safety, construction machinery, and clear interaction focal points.</p>
+            <p>
+            <div class="color-box" style="background-color: #0f172a;"></div> <strong>Secondary Base:</strong> Steel
+            Slate Navy (#0f172a) - Establishes engineering authority, professional trust, and readable typography.</p>
+            <p>
+            <div class="color-box" style="background-color: #f8fafc;"></div> <strong>Background Canvas:</strong> Soft
+            Off-White (#f8fafc) - Ensures a clean, modern aesthetic with high readability contrast scores.</p>
         </section>
 
         <section>
-            <h2>Wireframe Blueprints</h2>
-            <p>The structural layouts below map out the responsive layout planned for the primary service engine,
-                scaling from space-efficient mobile viewports to expansive multi-column desktop environments:</p>
-
-            <div class="wireframe-grid">
-                <div class="wireframe-pane">
-                    <h3>Mobile Layout View</h3>
-                    <div style="margin-top: 1rem;">
-                        <div class="wire-block">[ Vicente Construction Branding Header ]</div>
-                        <div class="wire-block">≡ Hamburger Navigation Menu</div>
-                        <div class="wire-block">Intro Summary &amp; Service Lists</div>
-                        <div class="wire-block" style="background-color: #cbd5e1; height: 140px;">
-                            Estimator Tool Form (Stacked Input Fields)<br>
-                            - Dropdown Menu Selection<br>
-                            - Numeric Dimension Input<br>
-                            - Custom Add-on Checkboxes
-                        </div>
-                        <div class="wire-block" style="border: 2px solid var(--primary-color);">[ Dynamic Live
-                            Calculation Display Box ]</div>
-                        <div class="wire-block">[ Footer Info &amp; LocalStorage Counter Data ]</div>
-                    </div>
-                </div>
-
-                <div class="wireframe-pane">
-                    <h3>Desktop Layout View (Wider Screens)</h3>
-                    <div style="margin-top: 1rem;">
-                        <div class="wire-block" style="padding: 1.25rem;">[ Vicente Construction Masthead Logo Bar ]
-                        </div>
-                        <div class="wire-flex-row">
-                            <div class="wire-block">Home Dashboard</div>
-                            <div class="wire-block">Project Gallery</div>
-                            <div class="wire-block">Estimator Engine</div>
-                        </div>
-                        <div class="wire-block">Intro Summary &amp; Service Lists</div>
-                        <div class="wire-flex-row">
-                            <div class="wire-block" style="background-color: #cbd5e1; flex: 1.5; height: 130px;">
-                                [ Left Grid Element ]<br>
-                                Estimator Interactive Form Controls
-                            </div>
-                            <div class="wire-block"
-                                style="border: 2px solid var(--primary-color); flex: 1; height: 130px;">
-                                [ Right Grid Element ]<br>
-                                Live Dynamic Output Box Summary
-                            </div>
-                        </div>
-                        <div class="wire-grid-3">
-                            <div class="wire-block">Gallery Asset 1</div>
-                            <div class="wire-block">Gallery Asset 2</div>
-                            <div class="wire-block">Gallery Asset 3</div>
-                        </div>
-                        <div class="wire-block">[ Standard Footer Content Area - Location Metatags &amp; Links ]</div>
-                    </div>
-                </div>
-            </div>
+            <h2>Typography (Fonts)</h2>
+            <p><strong>Heading Font:</strong> 'Segoe UI', Tahoma, sans-serif - Bold, clean industrial structure
+                mimicking commercial structural blueprints.</p>
+            <p><strong>Body Font:</strong> Verdana, Geneva, sans-serif - Highly legible sans-serif font variant to
+                optimize reading numeric parameters and forms on any device size.</p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; <span id="currentYear"></span> | Website Planning Document | Norlin Vicente | Guatemala City</p>
-    </footer>
-
-    <script>
-        // Automatic date injector to maintain semantic compliance
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
 </body>
 
 </html>
