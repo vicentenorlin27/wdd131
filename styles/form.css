@@ -20,6 +20,7 @@ header {
     color: white;
     text-align: center;
     padding: 1.5rem 0;
+    border-bottom: 4px solid var(--accent-color);
 }
 
 main {
@@ -90,7 +91,6 @@ textarea {
     font-weight: normal;
     cursor: pointer;
     min-height: 44px;
-    /* Essential touch target alignment */
 }
 
 input[type="radio"],
@@ -124,4 +124,20 @@ footer {
     color: #94a3b8;
     margin-top: 3rem;
     font-size: 0.9rem;
+    border-top: 4px solid var(--accent-color);
+}
+
+.counter-display {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.counter-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 1rem 0;
 }

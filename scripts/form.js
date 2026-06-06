@@ -1,13 +1,14 @@
-// Product Array Specification
+// Product Array Specification tailored to Vicente Construction LLC
 const products = [
-    { id: "fc-1020", name: "flux capacitor", averagerating: 4.5 },
-    { id: "fc-2050", name: "power cells", averagerating: 4.7 },
-    { id: "fs-1980", name: "time circuits", averagerating: 4.2 },
-    { id: "nv-1995", name: "warp drive", averagerating: 4.9 },
-    { id: "jm-2010", name: "hl-78 processor", averagerating: 4.0 }
+    { id: "dr-comm", name: "commercial steel door & frame", averagerating: 4.9 },
+    { id: "dr-wood", name: "architectural wood door", averagerating: 4.8 },
+    { id: "hd-spec", name: "commercial door hardware package", averagerating: 4.7 },
+    { id: "fr-metal", name: "metal stud framing service", averagerating: 4.9 },
+    { id: "dw-finish", name: "drywall installation & finishing", averagerating: 4.6 },
+    { id: "cp-trim", name: "finish carpentry (trim & baseboards)", averagerating: 4.8 }
 ];
 
-// Populate Select Menu Options
+// Populate Select Menu Options dynamically on page load
 document.addEventListener("DOMContentLoaded", () => {
     const productSelect = document.getElementById("productName");
 
@@ -15,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         products.forEach(product => {
             const option = document.createElement("option");
             option.value = product.id;
-            // Capitalize names nicely for display
-            option.textContent = product.name.replace(/\b\w/g, c => c.toUpperCase());
+            option.textContent = product.name.replace(/\b\w/g, char => char.toUpperCase());
             productSelect.appendChild(option);
         });
     }

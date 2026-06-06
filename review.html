@@ -8,18 +8,15 @@
     <link rel="stylesheet" href="styles/form.css">
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Retrieve and increment counter metrics
             let reviewCount = parseInt(localStorage.getItem("reviewCount")) || 0;
             reviewCount++;
             localStorage.setItem("reviewCount", reviewCount);
 
-            // Display values inside document element
             const displaySpan = document.getElementById("countDisplay");
             if (displaySpan) {
                 displaySpan.textContent = reviewCount;
             }
 
-            // Dynamic Footer Meta Information
             document.getElementById("currentYear").textContent = new Date().getFullYear();
             document.getElementById("lastModified").textContent = `Last Modification Date: ${document.lastModified}`;
         });
@@ -33,14 +30,15 @@
     <main>
         <div class="counter-display">
             <h2>Thank You for Your Feedback!</h2>
-            <p>Your product evaluation parameters have been saved successfully.</p>
+            <p>Your service evaluation metrics have been logged successfully.</p>
             <p>Total reviews submitted across this browser session:</p>
             <div id="countDisplay" class="counter-number">0</div>
-            <p><a href="form.html" style="color: var(--accent-color); font-weight: bold;">Submit Another Review</a></p>
+            <p><a href="form.html" style="color: var(--accent-color); font-weight: bold; text-decoration: none;">Submit
+                    Another Review</a></p>
         </div>
     </main>
     <footer>
-        <p>&copy; <span id="currentYear"></span> | Norlin Vicente | Guatemala City</p>
+        <p>&copy; <span id="currentYear"></span> | Norlin Vicente | Richmond, VA</p>
         <p id="lastModified"></p>
     </footer>
 </body>
