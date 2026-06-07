@@ -4,6 +4,10 @@
     --bg-color: #f8fafc;
     --text-color: #334155;
     --border-color: #cbd5e1;
+    --white-color: #ffffff;
+    --required-color: #dc2626;
+    --footer-text: #94a3b8;
+    --hover-color: #b45309;
 }
 
 body {
@@ -17,7 +21,7 @@ body {
 
 header {
     background-color: var(--primary-color);
-    color: #ffffff;
+    color: var(--white-color);
     text-align: center;
     padding: 1.5rem 0;
     border-bottom: 4px solid var(--accent-color);
@@ -30,7 +34,7 @@ main {
 }
 
 form {
-    background: #ffffff;
+    background: var(--white-color);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -58,7 +62,7 @@ label,
 }
 
 .required {
-    color: #dc2626;
+    color: var(--required-color);
 }
 
 input[type="text"],
@@ -73,6 +77,7 @@ textarea {
     box-sizing: border-box;
     font-size: 1rem;
     color: var(--text-color);
+    background-color: var(--white-color);
 }
 
 .rating-container,
@@ -92,7 +97,6 @@ textarea {
     font-weight: normal;
     cursor: pointer;
     min-height: 44px;
-    /* Optimal Mobile Touch Footprint */
 }
 
 input[type="radio"],
@@ -105,7 +109,7 @@ input[type="checkbox"] {
 
 input[type="submit"] {
     background-color: var(--primary-color);
-    color: #ffffff;
+    color: var(--white-color);
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
@@ -125,7 +129,7 @@ footer {
     text-align: center;
     padding: 1.5rem;
     background-color: var(--primary-color);
-    color: #94a3b8;
+    color: var(--footer-text);
     margin-top: 3rem;
     font-size: 0.9rem;
     border-top: 4px solid var(--accent-color);
