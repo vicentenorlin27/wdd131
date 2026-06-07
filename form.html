@@ -7,6 +7,7 @@
     <title>Product Review Form</title>
     <meta name="description"
         content="Product Review Form for WDD131, dynamically loading construction services lists and utilizing localStorage to track submissions.">
+    <meta name="author" content="Norlin Vicente">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
@@ -21,7 +22,7 @@
                 <legend>Product Selection</legend>
                 <label for="productName">Product Name <span class="required">*</span></label>
                 <select id="productName" name="productName" required>
-                    <option value="" disabled selected>Choose a Product...</option>
+                    <option value="" disabled selected>Select a Product ...</option>
                 </select>
             </fieldset>
 
@@ -29,11 +30,20 @@
                 <legend>Your Assessment</legend>
                 <div class="rating-label">Overall Rating <span class="required">*</span></div>
                 <div class="rating-container">
-                    <label><input type="radio" name="rating" value="1" required> 1 ★</label>
-                    <label><input type="radio" name="rating" value="2"> 2 ★</label>
-                    <label><input type="radio" name="rating" value="3"> 3 ★</label>
-                    <label><input type="radio" name="rating" value="4"> 4 ★</label>
-                    <label><input type="radio" name="rating" value="5"> 5 ★</label>
+                    <input type="radio" name="rating" id="rating1" value="1" required>
+                    <label for="rating1">1 ★</label>
+
+                    <input type="radio" name="rating" id="rating2" value="2" required>
+                    <label for="rating2">2 ★</label>
+
+                    <input type="radio" name="rating" id="rating3" value="3" required>
+                    <label for="rating3">3 ★</label>
+
+                    <input type="radio" name="rating" id="rating4" value="4" required>
+                    <label for="rating4">4 ★</label>
+
+                    <input type="radio" name="rating" id="rating5" value="5" required>
+                    <label for="rating5">5 ★</label>
                 </div>
 
                 <label for="installationDate">Date of Installation <span class="required">*</span></label>
@@ -41,10 +51,17 @@
 
                 <div class="features-label">Features Useful to You (Check all that apply)</div>
                 <div class="checkbox-container">
-                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                    <label><input type="checkbox" name="features" value="easeOfUse"> Ease of Use</label>
-                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
-                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                    <input type="checkbox" name="features" id="feat-durability" value="durability">
+                    <label for="feat-durability">Durability</label>
+
+                    <input type="checkbox" name="features" id="feat-ease" value="easeOfUse">
+                    <label for="feat-ease">Ease of Use</label>
+
+                    <input type="checkbox" name="features" id="feat-performance" value="performance">
+                    <label for="feat-performance">Performance</label>
+
+                    <input type="checkbox" name="features" id="feat-design" value="design">
+                    <label for="feat-design">Design</label>
                 </div>
             </fieldset>
 
