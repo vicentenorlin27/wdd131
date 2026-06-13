@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicente Construction LLC | Hardware Estimator</title>
+    <meta name="description" content="Calculate baseline labor costs for commercial door and hardware installations.">
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body>
+    <header>
+        <h1>Vicente Construction LLC</h1>
+        <p class="subtitle">Commercial Door & Hardware Subcontractor</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="estimator.html" class="active">Hardware Estimator</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Interactive Labor Budget Estimator</h2>
+        <p id="visit-counter"></p>
+
+        <form id="estimatorForm" onsubmit="return false;">
+            <label for="hardwareType">Select Opening/Hardware Scope:</label>
+            <select id="hardwareType" required>
+                <option value="">-- Choose Hardware Classification --</option>
+                <option value="standard">Standard Hollow Metal Frame & Door ($110 / unit)</option>
+                <option value="panic">Exit Device / Panic Bar Opening ($180 / unit)</option>
+                <option value="access">Electronic Access Control Hardware ($260 / unit)</option>
+            </select>
+
+            <label for="openingCount">Total Number of Openings (Units):</label>
+            <input type="number" id="openingCount" min="1" max="1000" placeholder="e.g. 15" required>
+
+            <button type="button" id="calcBtn">Generate Labor Estimate</button>
+        </form>
+
+        <div id="outputContainer"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Vicente Construction LLC | Richmond, VA</p>
+        <p><a href="references.html">Asset References</a></p>
+    </footer>
+    <script src="scripts/estimator.js"></script>
+</body>
+
+</html>
